@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Love Letter ❤️</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- INTRO -->
+<div class="screen" id="intro">
+    <h1>Hello My Dear ❤️</h1>
+    <button onclick="goQuestion()">Next</button>
+</div>
+
+<!-- QUESTION -->
+<div class="screen hidden" id="question">
+    <h1>Will You Be Mine? 💖</h1>
+
+    <div class="buttonRow">
+        <button class="yesBtn" onclick="goMessageIntro()">Yes</button>
+        <button class="noBtn" onclick="showSure()">No</button>
+    </div>
+</div>
+
+<!-- ARE YOU SURE -->
+<div class="screen hidden" id="surePage">
+    <h2>Are You Sure? Think Again... 😌</h2>
+    <button onclick="goQuestion()">Back</button>
+</div>
+
+<!-- MESSAGE INTRO -->
+<div class="screen hidden" id="messageIntro">
+    <h2>Something there for you. Open it. 💌</h2>
+
+    <div class="buttonRow">
+        <button class="openBlue" onclick="goMessage()">Open</button>
+        <button class="noRed" onclick="showNoPage()">No</button>
+    </div>
+</div>
+
+<!-- NO PAGE -->
+<div class="screen hidden" id="noPage">
+    <h2>Open cheyochu kada.. 😌</h2>
+    <button onclick="goMessageIntro()">Back</button>
+</div>
+
+<!-- MESSAGE -->
+<div class="screen hidden" id="message">
+
+    <!-- TOP SCREEN TITLE -->
+    <h1 class="topHeading">Letter For You ❤️</h1>
+
+    <div class="envelope">
+
+        <div class="envBody"></div>
+        <div class="envFlap"></div>
+
+        <button class="openBtn" onclick="openLetter()">OPEN 💌</button>
+
+        <div class="letterPaper">
+            <p id="letterText"></p>
+        </div>
+
+    </div>
+
+    <button onclick="proposal()" id="continueBtn" class="hidden">
+        Continue ❤️
+    </button>
+
+</div>
+
+<!-- PROPOSAL -->
+<div class="screen hidden" id="proposal">
+    <h1>Will You Be My Valentine? 💘</h1>
+
+    <button class="yesBtn" onclick="yesLove()">Yes ❤️</button>
+    <button class="noBtn" id="noBtn">No 😢</button>
+</div>
+
+<!-- FINAL -->
+<div class="screen hidden" id="final">
+
+    <div class="finalContainer">
+
+        <div class="circleBg">
+            <img src="PAIR.jpeg" class="loveImage">
+        </div>
+
+        <h1>I LOVE YOU ❤️</h1>
+        <h1>HAPPY VALENTIEN'S DAY BANGARU ❤️</h1>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
